@@ -284,5 +284,6 @@ poetry.toml
 
 # LSP config files
 pyrightconfig.json
-
+Scripts/
+pyvenv.cfg
 # End of https://www.toptal.com/developers/gitignore/api/git,pycharm+all,opencv,python
