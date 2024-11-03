@@ -1,7 +1,7 @@
 import cv2
 
 se2 = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5,5))
-k = 1
+k = 2
 
 for i in range(0,6): # 6번 반복
     gray=cv2.imread(f'0{i}.jpg',cv2.IMREAD_GRAYSCALE) # 이미지 가져오기
@@ -15,7 +15,7 @@ for i in range(0,6): # 6번 반복
     ret, binary_img = cv2.threshold(sobel, 120, 255, cv2.THRESH_BINARY)
 
     # 가로로 긴 구조요소를 이용한 여러번의 닫힘(close)를 통해 흰숫자 에지를 팽창한 후 원상태로 침식
-    b_closing = cv2.erode(cv2.dilate(binary_img,se2,iterations=k),se2,iterations=k)
+    b_closing = cv2.erode(cv2.dilate(binary_img,se2,iterations=k),se2,iterations=k) # k = 2
     b_closing = cv2.morphologyEx(b_closing, cv2.MORPH_CLOSE, se2)
 
     # 이미지 보여줌

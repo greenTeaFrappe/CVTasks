@@ -25,9 +25,6 @@ while True:
 
     if key == ord('q'):
         break
-    elif key == ord('n'):   # 오리지널
-        frame1 = frame.copy()
-        cv2.putText(frame1, 'Original', (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (100, 100, 100), 2)
     elif key == ord('b'):   # bilateral
         frame1 = cv2.bilateralFilter(frame, -1, 10, 5)
         cv2.putText(frame1, 'Bilateral', (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (100, 100, 100), 2)
@@ -44,6 +41,9 @@ while True:
     elif key == ord('o'):   # Oil Painting
         frame1 = cv2.xphoto.oilPainting(frame, 7, 1)
         cv2.putText(frame1, 'Oil Painting', (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (100, 100, 100), 2)
+    else:  # 오리지널
+        frame1 = frame.copy()
+        cv2.putText(frame1, 'Original', (10, 20), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (100, 100, 100), 2)
 
 cap.release()  # 카메라와 연결을 끊음
 cv2.destroyAllWindows()

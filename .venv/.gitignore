@@ -286,4 +286,5 @@ poetry.toml
 pyrightconfig.json
 Scripts/
 pyvenv.cfg
+/idea
 # End of https://www.toptal.com/developers/gitignore/api/git,pycharm+all,opencv,python
