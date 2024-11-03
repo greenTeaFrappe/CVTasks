@@ -1,7 +1,7 @@
 import cv2
 
 se2 = cv2.getStructuringElement(cv2.MORPH_ELLIPSE, (5,5))
-k = 2
+k = 7
 
 for i in range(0,6): # 6번 반복
     gray=cv2.imread(f'0{i}.jpg',cv2.IMREAD_GRAYSCALE) # 이미지 가져오기
