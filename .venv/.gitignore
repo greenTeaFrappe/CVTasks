@@ -287,4 +287,10 @@ pyrightconfig.json
 Scripts/
 pyvenv.cfg
 /idea
+
+*.png
+*.jpg
+*.jpeg
+*.mp4
+*.mp3
 # End of https://www.toptal.com/developers/gitignore/api/git,pycharm+all,opencv,python
