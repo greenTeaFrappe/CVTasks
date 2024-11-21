@@ -45,28 +45,6 @@ while cap.isOpened():
     except Exception as e:
         continue
 
-    # f_point = 0
-    #
-    # # 결함이 있는 경우만 루프를 실행
-    # if defects is not None:
-    #     for i in range(defects.shape[0]):
-    #         s, e, f, d = defects[i, 0]
-    #         start = tuple(contour[s][0])
-    #         end = tuple(contour[e][0])
-    #         far = tuple(contour[f][0])
-    #
-    #         # 결함의 깊이가 일정 수준 이상일 때 손가락 끝으로 간주
-    #         if d > 10000:
-    #             f_point += 1
-
-    # 손가락 개수에 따른 판별
-    # if f_point == 0:
-    #     cv2.putText(frame, "Rock", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
-    # elif f_point == 2:
-    #     cv2.putText(frame, "Scissor", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
-    # elif f_point == 5:
-    #     cv2.putText(frame, "Paper", (10, 50), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 255, 255), 2)
-
     # 결과 출력
     cv2.imshow("Mask", mask)
     cv2.imshow("Result", frame)
